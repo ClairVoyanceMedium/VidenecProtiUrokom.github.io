@@ -1,42 +1,111 @@
-# Indique aux robots que toutes les pages peuvent être explorées, sauf restrictions spécifiées
+# Robots.txt optimiziran za leto 2025 - Presega odličnost
+# Prilagojeno za slovanski trg, umetno inteligenco, Google AI, glasovne pomočnike in napredni SEO
+# Spletna stran: https://clairvoyancemedium.github.io/VidenecProtiUrokom.github.io/
+# Zadnja posodobitev: 09/03/2025 14:00 GMT
+# Opomba: Preizkusite z Google Search Console in robotstxt.org za potrditev
+
+##########################
+# Splošna dovoljenja     #
+##########################
 User-agent: *
-Disallow: /admin/
-Disallow: /tmp/
-Disallow: /private/
+Disallow: /zasebno/          # Zasebni imeniki (npr. admin, skripte)
+Disallow: /začasno/          # Začasne mape
+Disallow: /*?*               # Preprečuje podvojene vsebine (URL parametri)
+Allow: /*.css$               # CSS za optimalno upodabljanje (dovoljeno za vse)
+Allow: /*.js$                # Bistveni JS (dovoljeno za vse)
+Allow: /*.pdf$               # Dovoljuje strateške PDF-je (npr. vodniki)
+Allow: /                     # Privzeto dovoljenje
 
-# Bloquer des URL avec paramètres inutiles pour l'indexation
-Disallow: /*?debug=true
-Disallow: /*?preview=true
-
-# Permettre les fichiers nécessaires au bon affichage et fonctionnement
-Allow: /css/
-Allow: /js/
-Allow: /images/
-
-# Référencement des ressources multimédias
-Allow: *.png
-Allow: *.jpg
-Allow: *.webp
-Allow: *.css
-Allow: *.js
-
-# Fournir le chemin du fichier sitemap pour une meilleure indexation
-Sitemap: https://www.clairvoyancemedium.com/sitemap.xml
-
-# Autorisation pour les robots Google et Bing pour maximiser les campagnes publicitaires
+########################################
+# Googlebot (vključno z Google AI 2025) #
+########################################
 User-agent: Googlebot
-Allow: /
-User-agent: AdsBot-Google
-Allow: /
+Disallow: /zasebno/
+Disallow: /začasno/
+Allow: /obredi/
+Allow: /zaščita/
+Allow: /razčaranje/
+
+###########################################
+# Glasovni pomočniki                      #
+###########################################
+User-agent: Googlebot-Voice
+Disallow: /zasebno/
+Disallow: /začasno/
+Allow: /pogosta-vprašanja/
+Allow: /enostavni-obredi/
+Allow: /nasveti/
+User-agent: Amazonbot        # Hipotetično za Alexo
+Disallow: /zasebno/
+Disallow: /začasno/
+Allow: /pogosta-vprašanja/
+Allow: /nasveti/
+User-agent: Applebot         # Hipotetično za Siri
+Disallow: /zasebno/
+Disallow: /začasno/
+Allow: /pogosta-vprašanja/
+Allow: /nasveti/
+
+###########################################
+# Bing (slovanski trg zunaj Googla)       #
+###########################################
 User-agent: Bingbot
-Allow: /
+Disallow: /zasebno/
+Disallow: /začasno/
 
-# Bloquer les robots nuisibles ou non désirés
-User-agent: BadBot
+###########################################
+# Najdi.si (lokalni iskalnik za Slovenijo) #
+###########################################
+User-agent: Najdi.si
+Disallow: /zasebno/
+Disallow: /začasno/
+Allow: /obredi/
+Allow: /zaščita/
+Allow: /razčaranje/
+Allow: /pogosta-vprašanja/
+
+#################################
+# Blokiranje neželenih robotov  #
+#################################
+User-agent: AhrefsBot
 Disallow: /
-User-agent: EvilScraper
+User-agent: SemrushBot
+Disallow: /
+User-agent: MJ12bot
 Disallow: /
 
-# Empêcher l'exploration des fichiers sensibles
-Disallow: /config/
-Disallow: /backup/
+##################################################
+# Partnerji in Google analizatorji               #
+##################################################
+User-agent: Mediapartners-Google
+Disallow: /zasebno/
+User-agent: AdsBot-Google
+Disallow: /zasebno/
+
+##################################################
+# Novi IA pajki (pričakovanje 2025)             #
+##################################################
+User-agent: xAI-Crawler
+Disallow: /zasebno/
+User-agent: OpenAI-Crawler
+Disallow: /zasebno/
+User-agent: AnthropicBot
+Disallow: /zasebno/
+User-agent: Qwantify         # Podpora za evropske trge
+Disallow: /zasebno/
+
+##################################################
+# Napredna optimizacija (prednost mobilnim)     #
+##################################################
+User-agent: Googlebot-Mobile
+Disallow: /zasebno/
+Disallow: /začasno/
+Allow: /obredi/
+Allow: /zaščita/
+Allow: /razčaranje/
+
+##################
+# Sitemap in crawl #
+##################
+Sitemap: https://clairvoyancemedium.github.io/VidenecProtiUrokom.github.io/sitemap.xml
+Crawl-delay: 0.5
