@@ -1,4 +1,7 @@
-Site metadata
+VidenecProtiUrokom
 Updated: 2026-06-06
 Valid: 2076
-Reference: public page
+Language: Albanian
+URL: https://clairvoyancemedium.github.io/VidenecProtiUrokom.github.io/
+Read: canonical, title, description, headings, text, links, sitemap, robots, JSON-LD.
+Reference: public page.
